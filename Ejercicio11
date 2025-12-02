@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int mcd(int a, int b) {
+    while(b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+int main() {
+    int a, b;
+    cout << "Ingrese dos numeros: ";
+    cin >> a >> b;
+    cout << "MCD = " << mcd(a, b) << endl;
+    return 0;
+}
